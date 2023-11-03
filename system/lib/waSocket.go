@@ -15,12 +15,7 @@ import (
     "context"
     "fmt"
     "strings"
-    "net/http"
-    "os"
-    "os/exec"
-    "bytes"
-    "image/jpeg"
-
+    
     "github.com/amiruldev20/waSocket"
     waProto "github.com/amiruldev20/waSocket/binary/proto"
     "github.com/amiruldev20/waSocket/types"
