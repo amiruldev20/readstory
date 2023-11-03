@@ -12,16 +12,9 @@
 package message
 
 import (
-    "context"
     "fmt"
     "os"
-    "time"
-    "runtime"
-    "os/exec"
     "strings"
-    "net/http"
-    "net/url"
-    "io/ioutil"
     "encoding/json"
 
     "github.com/joho/godotenv"
@@ -56,11 +49,11 @@ func Msg(sock * waSocket.Client, msg * events.Message) {
     pushName := msg.Info.PushName
     isOwner := strings.Contains(sender, owner)
     //isAdmin := m.GetGroupAdmin(from, sender)
-    isBotAdm := m.GetGroupAdmin(from, botNumber + "@s.whatsapp.net")
-    isGroup := msg.Info.IsGroup
+    //isBotAdm := m.GetGroupAdmin(from, botNumber + "@s.whatsapp.net")
+    //isGroup := msg.Info.IsGroup
     args := strings.Split(m.GetCMD(), " ")
     command := strings.ToLower(args[0])
-    query := strings.Join(args[1: ], ` `)
+    //query := strings.Join(args[1: ], ` `)
     //extended := msg.Message.GetExtendedTextMessage()
     //quotedMsg := extended.GetContextInfo().GetQuotedMessage()
     //quotedImage := quotedMsg.GetImageMessage()
