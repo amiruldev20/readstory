@@ -47,7 +47,7 @@ func(m * renz) parseJID(arg string)(types.JID, bool) {
         recipient,
         err := types.ParseJID(arg)
         if err != nil {
-            fmt.Println("Invalid JID %s: %v", arg, err)
+        fmt.Println("Invalid JID %s: %v", arg, err)
             return recipient, false
         } else if recipient.User == "" {
             fmt.Println("Invalid JID %s: no server specified", arg)
