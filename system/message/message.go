@@ -25,11 +25,8 @@ import (
     "encoding/json"
 
     "github.com/joho/godotenv"
-    otto "github.com/robertkrimen/otto"
-
-    "mywabot/system/helper"
+    
     "mywabot/system/lib"
-    "mywabot/system/function"
 
     // "google.golang.org/protobuf/proto"
 
