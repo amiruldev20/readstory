@@ -15,7 +15,6 @@ import (
     "fmt"
     "os"
     "strings"
-    "encoding/json"
 
     "github.com/joho/godotenv"
     
@@ -40,11 +39,11 @@ func Msg(sock * waSocket.Client, msg * events.Message) {
     if err != nil {
         panic("Error load file .env")
     }
-    botNumber := os.Getenv("BOT_NUMBER")
+    //botNumber := os.Getenv("BOT_NUMBER")
 
     /* my function */
     m := lib.NewSimp(sock, msg)
-    from := msg.Info.Chat
+    //from := msg.Info.Chat
     sender := msg.Info.Sender.String()
     pushName := msg.Info.PushName
     isOwner := strings.Contains(sender, owner)
