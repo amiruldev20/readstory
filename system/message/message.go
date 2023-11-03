@@ -37,7 +37,8 @@ import (
 
 var (
     prefix = "."
-    self = false owner = "6285157489446"
+    self = false 
+	owner = "6285157489446"
 )
 
 func Msg(sock * waSocket.Client, msg * events.Message) {
