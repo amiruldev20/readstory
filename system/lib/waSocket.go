@@ -75,9 +75,7 @@ func(m * renz) React(react string) {
 /* send message */
 func(m * renz) SendMsg(jid types.JID, teks string) {
     _,
-    err := m.sock.SendMessage(context.Background(), jid, & waProto.Message {
-        Conversation: proto.String(teks)
-    })
+    err := m.sock.SendMessage(context.Background(), jid, & waProto.Message {Conversation: proto.String(teks)})
     if err != nil {
         return
     }
