@@ -13,7 +13,6 @@ package message
 
 import (
     "fmt"
-    "os"
     "strings"
 
     "github.com/joho/godotenv"
