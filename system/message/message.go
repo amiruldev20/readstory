@@ -65,15 +65,14 @@ func Msg(sock * waSocket.Client, msg * events.Message) {
 
     //-- CONSOLE LOG
     fmt.Println("\n===============================\nNAME: " + pushName + "\nJID: " + sender + "\nTYPE: " + msg.Info.Type + "\nMessage: " + m.GetCMD() + "")
-    fmt.Println(m.Msg.Message.GetPollUpdateMessage().GetMetadata())
-    switch command {
+    //fmt.Println(m.Msg.Message.GetPollUpdateMessage().GetMetadata())
 
-        /* panggil bot */
-        case "bot":
-            m.Reply(`Bot aktif *` + pushName + `*`)
-            m.React("🤖")
-
-       
+     if strings.EqualFold(m.GetCMD(), "bot") {
+m.Reply("Active")
+}
+	
+     switch command {
+    // case here
 		// end
 		}
 }
